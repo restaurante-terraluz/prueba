@@ -15,8 +15,10 @@
 
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+section[id],header[id]{scroll-margin-top:84px;}
 
 body{
+  position:relative;
   font-family:'Manrope',system-ui,sans-serif;
   font-weight:400;
   color:var(--tinta);
@@ -26,6 +28,17 @@ body{
     radial-gradient(1100px 600px at 85% -10%, rgba(177,79,59,.18), transparent 60%),
     radial-gradient(900px 600px at -10% 110%, rgba(201,122,92,.22), transparent 55%),
     var(--bg);
+}
+
+/* Capa de textura: arcos sutiles que se desplazan con la página (no en el hero) */
+body::before{
+  content:'';position:absolute;left:0;right:0;top:0;bottom:0;
+  z-index:-1;pointer-events:none;
+  background:url("../img/textura-arcos.svg") top center / 100% auto repeat-y;
+}
+body.home::before{top:100vh;}
+@media (max-width:600px){
+  body::before{background-size:160% auto;}
 }
 
 a{color:inherit;text-decoration:none;}
@@ -70,8 +83,11 @@ section{padding:80px 28px;max-width:var(--max-w);margin:0 auto;position:relative
 .nav .brand{
   font-family:'Fraunces',serif;font-weight:500;
   font-size:1.15rem;letter-spacing:.18em;color:var(--terracota);
+  transition:opacity .2s;
 }
-.nav-links{display:flex;gap:28px;}
+a.brand{cursor:pointer;}
+a.brand:hover{opacity:.68;}
+.nav-links{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:18px 24px;}
 .nav-links a{
   font-size:.86rem;font-weight:500;letter-spacing:.12em;
   text-transform:uppercase;color:var(--tinta-soft);transition:color .25s;
@@ -148,11 +164,11 @@ section{padding:80px 28px;max-width:var(--max-w);margin:0 auto;position:relative
   opacity:0;animation:fade-up 1.2s .25s cubic-bezier(.2,.8,.2,1) forwards;
 }
 .hero .subtitulo{
-  margin:1.4rem auto 0;font-size:clamp(1.05rem,2.4vw,1.3rem);
-  color:var(--tinta-soft);max-width:600px;
+  margin:1.4rem auto 0;font-size:clamp(1.12rem,2.5vw,1.38rem);
+  color:var(--tinta);font-weight:500;line-height:1.7;max-width:620px;
   opacity:0;animation:fade-up .9s .55s ease-out forwards;
 }
-.hero .subtitulo strong{color:var(--terracota);font-weight:600;}
+.hero .subtitulo strong{color:var(--terracota-dark);font-weight:700;}
 .hero .scroll-cue{
   margin-top:2.4rem;font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;
   color:var(--tinta-soft);opacity:0;animation:fade-up .9s .85s ease-out forwards;
@@ -200,7 +216,8 @@ section{padding:80px 28px;max-width:var(--max-w);margin:0 auto;position:relative
   position:relative;border-radius:14px;overflow:hidden;
   border:1px solid var(--linea);background:var(--bg-2);aspect-ratio:4/3;
 }
-.media-frame img{width:100%;height:100%;object-fit:cover;}
+.media-frame img{width:100%;height:100%;object-fit:cover;
+  font-size:0;color:transparent;} /* evita que el alt de una imagen rota se filtre */
 .media-frame .placeholder{
   display:none;width:100%;height:100%;
   align-items:center;justify-content:center;text-align:center;padding:1rem;
@@ -275,11 +292,17 @@ section{padding:80px 28px;max-width:var(--max-w);margin:0 auto;position:relative
 /* ---------- LISTA CONDICIONANTES ---------- */
 .constraints{margin-top:1rem;}
 .constraints li{
-  padding:1rem 0;border-bottom:1px dashed var(--linea);
-  display:grid;grid-template-columns:1.6rem 1fr;gap:1rem;align-items:start;
-  color:var(--tinta);font-size:.98rem;
+  padding:1.05rem 0;border-bottom:1px dashed var(--linea);
+  display:flex;gap:1rem;align-items:flex-start;
+  color:var(--tinta);font-size:1rem;line-height:1.65;
 }
-.constraints li::before{content:'↘';color:var(--terracota);font-family:'Fraunces',serif;}
+.constraints li:last-child{border-bottom:none;}
+.constraints li strong{color:var(--terracota-dark);font-weight:600;}
+.constraints .mk{
+  flex:0 0 auto;width:18px;height:18px;margin-top:.35rem;
+  border:2px solid var(--terracota);border-bottom:none;
+  border-radius:18px 18px 0 0;
+}
 
 /* ---------- FICHA ---------- */
 .ficha{
@@ -308,6 +331,61 @@ footer .meta{font-size:.85rem;opacity:.8;line-height:1.7;margin-top:1rem;}
   .reveal{opacity:1;transform:none;}
   .hero .hero-tag,.hero h1,.hero .subtitulo,.hero .scroll-cue{opacity:1;}
 }
+
+/* ---------- MEDIA FRAME: SIN RECORTE (renders) ---------- */
+.media-frame--contain{background:var(--bg-2);}
+.media-frame--contain img{object-fit:contain;}
+
+/* ---------- MATERIALES EN ARCO (home) ---------- */
+.materiales-arco{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:1rem;
+}
+@media (max-width:520px){.materiales-arco{grid-template-columns:1fr 1fr;gap:1rem;}}
+.material-arco{
+  position:relative;aspect-ratio:3/4;overflow:hidden;
+  border-radius:200px 200px 12px 12px;
+  box-shadow:0 14px 34px rgba(74,42,30,.16);
+  background:var(--bg-2);
+  transition:transform .5s cubic-bezier(.2,.8,.2,1);
+}
+.material-arco:hover{transform:translateY(-8px);}
+.material-arco img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  font-size:0;color:transparent;}
+.material-arco::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(42,26,20,0) 10%,rgba(42,26,20,.42) 55%,rgba(42,26,20,.88) 100%);
+}
+.material-arco .et{position:absolute;left:1.1rem;right:1.1rem;bottom:1.2rem;z-index:2;}
+.material-arco .et .tag{
+  font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;
+  color:#fff;font-weight:700;text-shadow:0 1px 6px rgba(0,0,0,.55);
+}
+.material-arco .et .name{
+  font-family:'Fraunces',serif;font-style:italic;font-size:1.3rem;
+  color:#fff;margin-top:.2rem;line-height:1.1;text-shadow:0 2px 10px rgba(0,0,0,.55);
+}
+
+/* ---------- INSPIRACIÓN ---------- */
+.inspo-words{position:relative;padding:40px 0 12px;overflow:hidden;text-align:center;}
+.inspo-words .arcos-inspo{
+  position:absolute;inset:0;width:100%;height:100%;z-index:0;
+  opacity:.55;pointer-events:none;
+}
+.inspo-words .palabras{
+  position:relative;z-index:1;
+  display:flex;flex-wrap:wrap;justify-content:center;align-items:baseline;
+  gap:.2rem 2.4rem;
+}
+.inspo-words .palabra{
+  font-family:'Fraunces',serif;font-style:italic;
+  font-variation-settings:'opsz' 144,'wght' 320,'SOFT' 95;
+  font-size:clamp(1.8rem,6vw,3.6rem);line-height:1.15;color:var(--terracota-dark);
+}
+.inspo-words .palabra:nth-child(even){color:var(--arcilla);}
+.inspo-words .palabra:nth-child(3n){color:var(--terracota);}
+.inspo-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:8px;}
+@media (max-width:680px){.inspo-grid{grid-template-columns:1fr;}}
+.inspo-grid .media-frame{aspect-ratio:16/9;}
 
 /* ---------- BACK LINK ---------- */
 .back-link{

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1600" preserveAspectRatio="xMidYMid slice">
+  <!-- arcos sutiles, intensidad y color variados; bordes superior/inferior despejados para tileado vertical -->
+  <path d="M -80 520 A 360 360 0 0 1 280 160" fill="none" stroke="#B14F3B" stroke-width="1.6" opacity="0.20"/>
+  <path d="M -60 540 A 380 380 0 0 1 320 160" fill="none" stroke="#C97A5C" stroke-width="1" opacity="0.12"/>
+  <path d="M 1680 360 A 300 300 0 0 0 1380 660" fill="none" stroke="#823423" stroke-width="1.4" opacity="0.16"/>
+  <path d="M 1640 980 A 240 240 0 0 1 1400 1220" fill="none" stroke="#C97A5C" stroke-width="1.6" opacity="0.18"/>
+  <path d="M 1690 1000 A 270 270 0 0 1 1420 1270" fill="none" stroke="#D9C3A8" stroke-width="1" opacity="0.22"/>
+  <path d="M 360 1280 A 220 220 0 0 1 800 1280" fill="none" stroke="#A07550" stroke-width="1.3" opacity="0.13"/>
+  <path d="M 980 240 A 180 180 0 0 1 1340 240" fill="none" stroke="#D9C3A8" stroke-width="1.2" opacity="0.18"/>
+  <path d="M 540 760 A 150 150 0 0 1 840 760" fill="none" stroke="#B14F3B" stroke-width="1" opacity="0.10"/>
+  <path d="M -40 1140 A 200 200 0 0 1 160 940" fill="none" stroke="#823423" stroke-width="1.2" opacity="0.12"/>
+  <circle cx="1180" cy="900" r="260" fill="none" stroke="#C97A5C" stroke-width="1" opacity="0.09"/>
+</svg>

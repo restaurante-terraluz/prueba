@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TERRALUZ — Instalaciones</title>
+<link rel="icon" type="image/png" href="../favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..900,0..100&family=Manrope:wght@300..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <a class="brand" href="../index.html#inicio">TERRALUZ</a>
+  <ul class="nav-links">
+    <li><a href="../index.html#concepto">Concepto</a></li>
+    <li><a href="../materiales/index.html">Materiales</a></li>
+    <li><a href="../renders/index.html">Renders</a></li>
+    <li><a href="../inspiracion/index.html">Inspiración</a></li>
+    <li><a href="index.html">Instalaciones</a></li>
+  </ul>
+  <button class="menu-btn" id="menu-open" aria-label="Abrir menú">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="menu-overlay" id="menu-overlay">
+  <button class="close-btn" id="menu-close" aria-label="Cerrar menú">&times;</button>
+  <a class="brand" href="../index.html#inicio">TERRALUZ</a>
+  <div class="menu-group menu-group--sections">
+    <div class="menu-label">El relato — página de inicio</div>
+    <ul>
+      <li><a href="../index.html#inicio">Inicio</a></li>
+      <li><a href="../index.html#concepto">Concepto</a></li>
+      <li><a href="../index.html#paleta">Paleta cromática</a></li>
+      <li><a href="../index.html#lenguaje">Lenguaje formal</a></li>
+      <li><a href="../index.html#contexto">Contexto</a></li>
+    </ul>
+  </div>
+  <div class="menu-group menu-group--pages">
+    <div class="menu-label">Secciones del proyecto</div>
+    <ul>
+      <li><a href="../inspiracion/index.html">Inspiración</a></li>
+      <li><a href="../materiales/index.html">Materiales</a></li>
+      <li><a href="../renders/index.html">Renders</a></li>
+      <li><a href="../espacio/index.html">Espacio y programa</a></li>
+      <li><a href="../iluminacion/index.html">Iluminación</a></li>
+      <li><a href="../documentacion/index.html">Documentación</a></li>
+      <li><a href="index.html">Instalaciones</a></li>
+    </ul>
+  </div>
+</div>
+
+<a class="back-link" href="../index.html">← Volver al proyecto</a>
+
+<section>
+  <div class="seccion-titulo reveal">
+    <span class="eyebrow">Planimetría técnica</span>
+    <h2>Planos de <em>instalaciones</em>.</h2>
+    <p>La infraestructura que hace habitable el espacio, justificada conforme al CTE: climatización, ventilación, saneamiento, electricidad y protección contra incendios.</p>
+  </div>
+
+  <div class="grid-2 reveal">
+    <div>
+      <div class="media-frame">
+        <img src="../img/planos/instalaciones/climatizacion.jpg" alt="Plano de climatización" onerror="mediaFallback(this)">
+        <div class="placeholder">climatizacion.jpg</div>
+      </div>
+      <div class="media-caption">
+        <div class="nombre">Climatización</div>
+        <div class="detalle">Trazado de conductos, difusores y unidad de tratamiento de aire.</div>
+      </div>
+    </div>
+    <div>
+      <div class="media-frame">
+        <img src="../img/planos/instalaciones/ventilacion.jpg" alt="Plano de ventilación" onerror="mediaFallback(this)">
+        <div class="placeholder">ventilacion.jpg</div>
+      </div>
+      <div class="media-caption">
+        <div class="nombre">Ventilación</div>
+        <div class="detalle">Ramales de extracción, rejillas en falsos techos y shunts.</div>
+      </div>
+    </div>
+    <div>
+      <div class="media-frame">
+        <img src="../img/planos/instalaciones/saneamiento.jpg" alt="Plano de saneamiento" onerror="mediaFallback(this)">
+        <div class="placeholder">saneamiento.jpg</div>
+      </div>
+      <div class="media-caption">
+        <div class="nombre">Saneamiento</div>
+        <div class="detalle">Red de PVC y conexión al colector existente.</div>
+      </div>
+    </div>
+    <div>
+      <div class="media-frame">
+        <img src="../img/planos/instalaciones/electricidad.jpg" alt="Plano de electricidad" onerror="mediaFallback(this)">
+        <div class="placeholder">electricidad.jpg</div>
+      </div>
+      <div class="media-caption">
+        <div class="nombre">Electricidad e incendios</div>
+        <div class="detalle">Circuitos de fuerza y alumbrado, extinción y recorridos de evacuación.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="seccion-titulo reveal">
+    <h2>Sistemas</h2>
+    <p>Las cinco instalaciones que ordenan el funcionamiento del local.</p>
+  </div>
+  <div class="grid-3 reveal">
+    <div class="card-material">
+      <div class="tag">CTE DB-HE</div>
+      <div class="name">Climatización</div>
+      <div class="desc">Sistema aire-aire con UTA de 400×700 mm sobre la puerta de acceso. Conductos de fibra de vidrio con transición progresiva, difusores motorizados en la zona pública y rejillas de retorno en techo.</div>
+    </div>
+    <div class="card-material">
+      <div class="tag">CTE DB-HS3</div>
+      <div class="name">Ventilación</div>
+      <div class="desc">Tres ramales con rejillas en falsos techos y conductos circulares Ø 10 cm que vierten a shunts en pilares. Cocina con campanas de extracción conectadas a la salida de humos.</div>
+    </div>
+    <div class="card-material">
+      <div class="tag">CTE DB-HS</div>
+      <div class="name">Saneamiento</div>
+      <div class="desc">Red de PVC conectada al colector existente: lavabos, ducha del vestuario privado y sumidero del cuarto de basuras, dimensionada según la tabla 4.1 del DB-HS Sección 4.</div>
+    </div>
+    <div class="card-material">
+      <div class="tag">REBT</div>
+      <div class="name">Electricidad</div>
+      <div class="desc">Cuadro general de mando y protección con circuitos separados de iluminación y fuerza, bases distribuidas por zona y sensores de presencia en el guardarropa.</div>
+    </div>
+    <div class="card-material">
+      <div class="tag">CTE DB-SI</div>
+      <div class="name">Protección contra incendios</div>
+      <div class="desc">Cocina de riesgo alto con extintor tipo K y agua pulverizada; extintores ABC en pasillos y CO₂ en zonas eléctricas. Recorrido de evacuación de 20,01 m (&lt; 25 m), con señalización fotoluminiscente.</div>
+    </div>
+    <div class="card-material">
+      <div class="tag">Albañilería</div>
+      <div class="name">Nivelación y tabiquería</div>
+      <div class="desc">Tabiquería interior de zonificación y solera nivelada con la calle (cota −10 cm) mediante banda anti-impacto, aislante XPS y mortero auto-nivelante.</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="tagline">Sustancia <em>+</em> luz</div>
+  <div class="meta">TERRALUZ</div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

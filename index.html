@@ -10,16 +10,17 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..900,0..100&family=Manrope:wght@300..700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="home">
 
 <nav class="nav">
-  <div class="brand">TERRALUZ</div>
+  <a class="brand" href="index.html#inicio">TERRALUZ</a>
   <ul class="nav-links">
     <li><a href="#concepto">Concepto</a></li>
     <li><a href="#paleta">Paleta</a></li>
-    <li><a href="#lenguaje">Lenguaje</a></li>
     <li><a href="materiales/index.html">Materiales</a></li>
     <li><a href="renders/index.html">Renders</a></li>
+    <li><a href="inspiracion/index.html">Inspiración</a></li>
+    <li><a href="instalaciones/index.html">Instalaciones</a></li>
   </ul>
   <button class="menu-btn" id="menu-open" aria-label="Abrir menú">
     <span></span><span></span><span></span>
@@ -28,7 +29,7 @@
 
 <div class="menu-overlay" id="menu-overlay">
   <button class="close-btn" id="menu-close" aria-label="Cerrar menú">&times;</button>
-  <div class="brand">TERRALUZ</div>
+  <a class="brand" href="index.html#inicio">TERRALUZ</a>
 
   <div class="menu-group menu-group--sections">
     <div class="menu-label">El relato — en esta página</div>
@@ -44,11 +45,13 @@
   <div class="menu-group menu-group--pages">
     <div class="menu-label">Secciones del proyecto</div>
     <ul>
+      <li><a href="inspiracion/index.html">Inspiración</a></li>
       <li><a href="materiales/index.html">Materiales</a></li>
       <li><a href="renders/index.html">Renders</a></li>
       <li><a href="espacio/index.html">Espacio y programa</a></li>
       <li><a href="iluminacion/index.html">Iluminación</a></li>
       <li><a href="documentacion/index.html">Documentación</a></li>
+      <li><a href="instalaciones/index.html">Instalaciones</a></li>
     </ul>
   </div>
 </div>
@@ -84,7 +87,7 @@
     </div>
     <div class="concept-text">
       <p>El proyecto nace de la fusión de <strong>sustancia y luz</strong> como ejes de una experiencia sensorial integral: una estética moderna, cálida y envolvente, sustentada en el color terracota y las formas naturales.</p>
-      <p>A través de una paleta de tonos arcilla y rojizos, combinada con microcemento, ladrillo visto y cerámicas artesanales, el espacio evoca lo orgánico, lo manual y una reinterpretación contemporánea de la estética mediterránea.</p>
+      <p>A través de una paleta de tonos arcilla y rojizos, combinada con microcemento, mortero de cal y cerámicas artesanales, el espacio evoca lo orgánico, lo manual y una reinterpretación contemporánea de la estética mediterránea.</p>
       <p>Una propuesta gourmet que integra gastronomía, diseño y espacio en una atmósfera emocional y acogedora, deliberadamente alejada de lo rígido o tradicional.</p>
     </div>
   </div>
@@ -116,33 +119,25 @@
   </div>
 </section>
 
-<!-- 4. MATERIALES (preview) -->
+<!-- 4. MATERIALES (preview, en arco) -->
 <section id="materiales">
   <div class="seccion-titulo reveal">
     <span class="section-num">— 03</span>
     <h2>Materiales con <em>memoria</em>.</h2>
     <p>Texturas y acabados que sostienen la atmósfera del proyecto.</p>
   </div>
-  <div class="grid-4 reveal">
-    <div class="card-material">
-      <div class="tag">Paramentos · Suelos</div>
-      <div class="name">Microcemento</div>
-      <div class="desc">Continuidad mineral entre suelos y muros.</div>
+  <div class="materiales-arco reveal">
+    <div class="material-arco" style="background:#C9BCA9;">
+      <img src="img/materiales/microcemento.jpg" alt="">
+      <div class="et"><div class="tag">Paramentos · Suelos</div><div class="name">Microcemento</div></div>
     </div>
-    <div class="card-material">
-      <div class="tag">Paramentos</div>
-      <div class="name">Ladrillo visto</div>
-      <div class="desc">Textura artesanal de carácter orgánico.</div>
+    <div class="material-arco" style="background:#B14F3B;">
+      <img src="img/materiales/mortero.jpg" alt="">
+      <div class="et"><div class="tag">Paramentos · Barra</div><div class="name">Mortero de cal</div></div>
     </div>
-    <div class="card-material">
-      <div class="tag">Revestimientos</div>
-      <div class="name">Cerámica artesanal</div>
-      <div class="desc">Piezas hechas a mano que filtran la luz.</div>
-    </div>
-    <div class="card-material">
-      <div class="tag">Mobiliario</div>
-      <div class="name">Madera</div>
-      <div class="desc">Calidez natural en mobiliario y detalles.</div>
+    <div class="material-arco" style="background:#C97A5C;">
+      <img src="img/materiales/ceramica.jpg" alt="">
+      <div class="et"><div class="tag">Celosías</div><div class="name">Cerámica artesanal</div></div>
     </div>
   </div>
   <a class="cta-link reveal" href="materiales/index.html">Explorar materiales →</a>
@@ -177,59 +172,84 @@
     <p>Vistas del espacio bajo su propia luz.</p>
   </div>
   <div class="grid-3 reveal">
-    <div class="media-frame">
+    <div class="media-frame media-frame--contain">
       <img src="img/renders/edificio-diurno.jpg" alt="Fachada del local de día" onerror="mediaFallback(this)">
       <div class="placeholder">edificio-diurno.jpg</div>
     </div>
-    <div class="media-frame">
+    <div class="media-frame media-frame--contain">
       <img src="img/renders/interior-celosia.jpg" alt="Comedor bajo la celosía cerámica" onerror="mediaFallback(this)">
       <div class="placeholder">interior-celosia.jpg</div>
     </div>
-    <div class="media-frame">
-      <img src="img/renders/edificio-nocturno.jpg" alt="Fachada del local de noche, iluminada" onerror="mediaFallback(this)">
-      <div class="placeholder">edificio-nocturno.jpg</div>
+    <div class="media-frame media-frame--contain">
+      <img src="img/renders/detalle-fachada.jpg" alt="Detalle del acceso y los escaparates" onerror="mediaFallback(this)">
+      <div class="placeholder">detalle-fachada.jpg</div>
     </div>
   </div>
   <a class="cta-link reveal" href="renders/index.html">Ver todos los renders →</a>
 </section>
 
-<!-- 7. CONTEXTO / ESPACIO -->
-<section id="contexto">
+<!-- 7. INSPIRACIÓN (teaser) -->
+<section id="inspiracion-teaser">
   <div class="seccion-titulo reveal">
     <span class="section-num">— 06</span>
+    <h2>De dónde nace la <em>atmósfera</em>.</h2>
+    <p>Un campo de referencias que condensa el carácter del proyecto en cinco palabras.</p>
+  </div>
+  <div class="inspo-words reveal">
+    <svg class="arcos-inspo" viewBox="0 0 1200 360" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M 100 360 A 220 220 0 0 1 540 360" fill="none" stroke="#C97A5C" stroke-width="2" opacity="0.5"/>
+      <path d="M 240 360 A 360 360 0 0 1 960 360" fill="none" stroke="#D9C3A8" stroke-width="2" opacity="0.6"/>
+      <path d="M 660 360 A 220 220 0 0 1 1100 360" fill="none" stroke="#B14F3B" stroke-width="2" opacity="0.45"/>
+      <circle cx="600" cy="360" r="300" fill="none" stroke="#C97A5C" stroke-width="1.2" opacity="0.28"/>
+    </svg>
+    <div class="palabras">
+      <span class="palabra">Terracota</span>
+      <span class="palabra">Cálido</span>
+      <span class="palabra">Orgánico</span>
+      <span class="palabra">Íntimo</span>
+      <span class="palabra">Hogar</span>
+    </div>
+  </div>
+  <a class="cta-link reveal" href="inspiracion/index.html">Ver el moodboard de inspiración →</a>
+</section>
+
+<!-- 8. CONTEXTO / ESPACIO -->
+<section id="contexto">
+  <div class="seccion-titulo reveal">
+    <span class="section-num">— 07</span>
     <h2>Un local con historia y con <em>reglas</em>.</h2>
     <p>El punto de partida: un local urbano de alto flujo peatonal, con condicionantes que el proyecto convierte en oportunidades.</p>
   </div>
   <div class="grid-2 reveal">
     <div>
-      <p style="color:var(--tinta-soft);line-height:1.8;">El local se sitúa en una zona comercial concurrida del centro de una ciudad mediterránea. La relación visual con la calle se entiende como un activo: no un escaparate convencional, sino un mecanismo para anticipar desde fuera la atmósfera cálida del interior.</p>
+      <p style="color:var(--tinta-soft);line-height:1.8;">El local se sitúa en una zona comercial concurrida del centro de Zaragoza, en Calle Gil Berges, 8. La relación visual con la calle se entiende como un activo: no un escaparate convencional, sino un mecanismo para anticipar desde fuera la atmósfera cálida del interior.</p>
     </div>
     <div>
       <ul class="constraints">
-        <li>Fachada y ventanas <strong>protegidas</strong>; no admiten modificación.</li>
-        <li>Diferencias de altura entre exterior e interior: reto de accesibilidad, oportunidad para zonificar.</li>
-        <li>Abundante <strong>luz natural</strong>, asumida como material protagonista.</li>
-        <li>Intervención centrada en el <strong>diseño interior</strong>.</li>
+        <li><span class="mk" aria-hidden="true"></span><span>Fachada y ventanas <strong>protegidas</strong>; no admiten modificación.</span></li>
+        <li><span class="mk" aria-hidden="true"></span><span>Diferencias de altura entre exterior e interior: reto de accesibilidad, oportunidad para zonificar.</span></li>
+        <li><span class="mk" aria-hidden="true"></span><span>Abundante <strong>luz natural</strong>, asumida como material protagonista.</span></li>
+        <li><span class="mk" aria-hidden="true"></span><span>Intervención centrada en el <strong>diseño interior</strong>.</span></li>
       </ul>
     </div>
   </div>
   <a class="cta-link reveal" href="espacio/index.html">Recorrer el espacio y el programa →</a>
 </section>
 
-<!-- 8. ILUMINACIÓN (teaser) -->
+<!-- 9. ILUMINACIÓN (teaser) -->
 <section id="iluminacion-teaser">
   <div class="seccion-titulo reveal">
-    <span class="section-num">— 07</span>
+    <span class="section-num">— 08</span>
     <h2>La luz como <em>material</em>.</h2>
     <p>Luz natural filtrada por celosías cerámicas y una luz artificial cálida que prolonga la atmósfera al caer la tarde.</p>
   </div>
   <a class="cta-link reveal" href="iluminacion/index.html">Descubrir la estrategia de luz →</a>
 </section>
 
-<!-- 9. DOCUMENTACIÓN (preview) -->
+<!-- 10. DOCUMENTACIÓN (preview) -->
 <section id="documentacion">
   <div class="seccion-titulo reveal">
-    <span class="section-num">— 08</span>
+    <span class="section-num">— 09</span>
     <h2>Planimetría y <em>secciones</em>.</h2>
     <p>La traducción técnica del proyecto.</p>
   </div>
@@ -248,6 +268,16 @@
     </div>
   </div>
   <a class="cta-link reveal" href="documentacion/index.html">Ver documentación completa →</a>
+</section>
+
+<!-- 11. INSTALACIONES (teaser) -->
+<section id="instalaciones-teaser">
+  <div class="seccion-titulo reveal">
+    <span class="section-num">— 10</span>
+    <h2>Planos de <em>instalaciones</em>.</h2>
+    <p>Climatización, ventilación, saneamiento, electricidad y protección contra incendios — la infraestructura que hace habitable el espacio.</p>
+  </div>
+  <a class="cta-link reveal" href="instalaciones/index.html">Ver los planos de instalaciones →</a>
 </section>
 
 <footer>
