@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TERRALUZ — Materiales</title>
+<link rel="icon" type="image/png" href="../favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..900,0..100&family=Manrope:wght@300..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="brand">TERRALUZ</div>
+  <ul class="nav-links">
+    <li><a href="../index.html#concepto">Concepto</a></li>
+    <li><a href="../index.html#paleta">Paleta</a></li>
+    <li><a href="index.html">Materiales</a></li>
+    <li><a href="../renders/index.html">Renders</a></li>
+    <li><a href="../documentacion/index.html">Documentación</a></li>
+  </ul>
+  <button class="menu-btn" id="menu-open" aria-label="Abrir menú">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="menu-overlay" id="menu-overlay">
+  <button class="close-btn" id="menu-close" aria-label="Cerrar menú">&times;</button>
+  <div class="brand">TERRALUZ</div>
+  <div class="menu-group menu-group--sections">
+    <div class="menu-label">El relato — página de inicio</div>
+    <ul>
+      <li><a href="../index.html#inicio">Inicio</a></li>
+      <li><a href="../index.html#concepto">Concepto</a></li>
+      <li><a href="../index.html#paleta">Paleta cromática</a></li>
+      <li><a href="../index.html#lenguaje">Lenguaje formal</a></li>
+      <li><a href="../index.html#contexto">Contexto</a></li>
+    </ul>
+  </div>
+  <div class="menu-group menu-group--pages">
+    <div class="menu-label">Secciones del proyecto</div>
+    <ul>
+      <li><a href="index.html">Materiales</a></li>
+      <li><a href="../renders/index.html">Renders</a></li>
+      <li><a href="../espacio/index.html">Espacio y programa</a></li>
+      <li><a href="../iluminacion/index.html">Iluminación</a></li>
+      <li><a href="../documentacion/index.html">Documentación</a></li>
+    </ul>
+  </div>
+</div>
+
+<a class="back-link" href="../index.html">← Volver al proyecto</a>
+
+<section>
+  <div class="seccion-titulo reveal">
+    <span class="eyebrow">Materialidad</span>
+    <h2>Materiales</h2>
+    <p>Texturas y acabados que sostienen la atmósfera del proyecto.</p>
+  </div>
+
+  <div class="grid-2 reveal">
+    <div class="card-material">
+      <div class="media-frame" style="margin-bottom:1rem;">
+        <img src="../img/materiales/microcemento.jpg" alt="Microcemento" onerror="mediaFallback(this)">
+        <div class="placeholder">microcemento.jpg</div>
+      </div>
+      <div class="tag">Paramentos · Suelos</div>
+      <div class="name">Microcemento</div>
+      <div class="desc">Aporta continuidad mineral entre suelos y muros, con un acabado cálido y sin juntas.</div>
+    </div>
+
+    <div class="card-material">
+      <div class="media-frame" style="margin-bottom:1rem;">
+        <img src="../img/materiales/ladrillo.jpg" alt="Ladrillo visto" onerror="mediaFallback(this)">
+        <div class="placeholder">ladrillo.jpg</div>
+      </div>
+      <div class="tag">Paramentos</div>
+      <div class="name">Ladrillo visto</div>
+      <div class="desc">Textura artesanal que introduce carácter orgánico y manual en los muros principales.</div>
+    </div>
+
+    <div class="card-material">
+      <div class="media-frame" style="margin-bottom:1rem;">
+        <img src="../img/materiales/ceramica.jpg" alt="Cerámica artesanal" onerror="mediaFallback(this)">
+        <div class="placeholder">ceramica.jpg</div>
+      </div>
+      <div class="tag">Revestimientos · Celosías</div>
+      <div class="name">Cerámica artesanal</div>
+      <div class="desc">Piezas hechas a mano que filtran la luz y conectan con la tradición mediterránea.</div>
+    </div>
+
+    <div class="card-material">
+      <div class="media-frame" style="margin-bottom:1rem;">
+        <img src="../img/materiales/madera.jpg" alt="Madera" onerror="mediaFallback(this)">
+        <div class="placeholder">madera.jpg</div>
+      </div>
+      <div class="tag">Mobiliario</div>
+      <div class="name">Madera</div>
+      <div class="desc">Calidez natural en mobiliario y revestimientos puntuales del espacio.</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="tagline">Sustancia <em>+</em> luz</div>
+  <div class="meta">TERRALUZ</div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

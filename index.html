@@ -1,425 +1,260 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>TERRALUZ — Restaurante cafetería gourmet · Zaragoza</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TERRALUZ — Restaurante cafetería gourmet</title>
+<link rel="icon" type="image/png" href="favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..900,30..100&family=Manrope:wght@300..700&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --bg: #f4ece3;
-    --bg-2: #ece1d3;
-    --paper: #fbf6ef;
-    --terracota: #b14f3b;
-    --terracota-dark: #823423;
-    --arcilla: #c97a5c;
-    --beige: #d9c3a8;
-    --tinta: #2a1a14;
-    --tinta-soft: #5a4438;
-    --linea: #e1ccb4;
-    --madera: #a07550;
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  html,body{background:var(--bg);color:var(--tinta);font-family:'Manrope',sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased}
-  body{
-    background:
-      radial-gradient(1100px 600px at 85% -10%, rgba(177,79,59,.18), transparent 60%),
-      radial-gradient(900px 600px at -10% 110%, rgba(201,122,92,.22), transparent 55%),
-      var(--bg);
-    min-height:100vh;
-  }
-  .display{font-family:'Fraunces',serif;font-optical-sizing:auto;font-weight:400;letter-spacing:-0.01em}
-  .eyebrow{font-family:'Manrope',sans-serif;text-transform:uppercase;letter-spacing:.22em;font-size:.72rem;color:var(--terracota-dark);font-weight:600}
- 
-  /* ---------- NAV ---------- */
-  nav{
-    position:sticky;top:0;z-index:20;
-    backdrop-filter:saturate(140%) blur(10px);
-    background:rgba(244,236,227,.7);
-    border-bottom:1px solid var(--linea);
-  }
-  nav .row{
-    max-width:1180px;margin:0 auto;padding:14px 28px;
-    display:flex;align-items:center;justify-content:space-between;gap:24px;
-  }
-  nav .mark{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;letter-spacing:.18em}
-  nav ul{display:flex;list-style:none;gap:26px;flex-wrap:wrap}
-  nav a{color:var(--tinta-soft);text-decoration:none;font-size:.86rem;font-weight:500;transition:color .2s}
-  nav a:hover{color:var(--terracota-dark)}
- 
-  /* ---------- HERO ---------- */
-  header.hero{
-    max-width:1180px;margin:0 auto;padding:90px 28px 60px;
-    display:grid;grid-template-columns:1.3fr .9fr;gap:60px;align-items:end;
-  }
-  header.hero .left .eyebrow{margin-bottom:18px;display:inline-block}
-  header.hero h1{
-    font-family:'Fraunces',serif;
-    font-variation-settings:"opsz" 144,"SOFT" 30;
-    font-weight:400;
-    font-size:clamp(4.2rem, 13vw, 11rem);
-    line-height:.88;
-    letter-spacing:-0.03em;
-    color:var(--terracota-dark);
-  }
-  header.hero h1 .italic{font-style:italic;font-weight:300;color:var(--terracota)}
-  header.hero p.lead{
-    margin-top:28px;max-width:38ch;color:var(--tinta-soft);font-size:1.05rem;
-  }
-  header.hero .right{position:relative;min-height:340px}
-  /* Decorative arch */
-  .arch{
-    width:100%;aspect-ratio: 3/4;
-    background: linear-gradient(180deg, var(--arcilla) 0%, var(--terracota) 55%, var(--terracota-dark) 100%);
-    border-radius: 999px 999px 24px 24px;
-    position:relative;
-    box-shadow: 0 30px 60px -30px rgba(130,52,35,.45), inset 0 -2px 0 rgba(0,0,0,.06);
-    overflow:hidden;
-  }
-  .arch::before{
-    content:"";position:absolute;inset:18px;
-    border:1.5px solid rgba(251,246,239,.55);
-    border-radius: 999px 999px 14px 14px;
-  }
-  .arch::after{
-    content:"LUZ";position:absolute;left:50%;top:46%;transform:translate(-50%,-50%);
-    font-family:'Fraunces',serif;font-style:italic;font-weight:300;
-    font-size:clamp(2.4rem, 4vw, 3.2rem);color:rgba(251,246,239,.85);letter-spacing:.04em;
-  }
-  .arch .grid-lines{
-    position:absolute;inset:0;
-    background-image:
-      repeating-linear-gradient(0deg, transparent 0 22px, rgba(251,246,239,.08) 22px 23px),
-      repeating-linear-gradient(90deg, transparent 0 22px, rgba(251,246,239,.06) 22px 23px);
-    mix-blend-mode: soft-light;
-    border-radius: inherit;
-  }
-  .arch .pill{
-    position:absolute;left:18px;bottom:18px;
-    background:rgba(251,246,239,.18);
-    border:1px solid rgba(251,246,239,.35);
-    color:#fbf6ef;
-    padding:6px 12px;border-radius:999px;
-    font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;
-  }
- 
-  /* ---------- SECTION BASE ---------- */
-  section{max-width:1180px;margin:0 auto;padding:80px 28px;position:relative}
-  section h2{
-    font-family:'Fraunces',serif;font-weight:400;
-    font-size:clamp(2rem,4vw,3rem);line-height:1.05;letter-spacing:-0.02em;
-    color:var(--tinta);max-width:22ch;
-  }
-  section h2 em{font-style:italic;color:var(--terracota-dark);font-weight:300}
-  .section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:48px;flex-wrap:wrap}
-  .section-head .num{font-family:'Fraunces',serif;font-style:italic;font-weight:300;color:var(--terracota);font-size:1.05rem}
- 
-  /* ---------- CONCEPT ---------- */
-  .concept{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
-  .concept .body p{color:var(--tinta-soft);font-size:1.02rem;margin-bottom:18px;max-width:48ch}
-  .concept .body p .hl{color:var(--terracota-dark);font-weight:600}
-  .concept .quote{
-    border-left:2px solid var(--terracota);
-    padding:6px 22px;
-    font-family:'Fraunces',serif;font-style:italic;font-weight:300;
-    font-size:clamp(1.4rem,2.4vw,1.9rem);line-height:1.25;color:var(--tinta);
-  }
- 
-  /* ---------- PALETTE ---------- */
-  .palette{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:8px}
-  .swatch{
-    aspect-ratio:3/4;border-radius:6px 6px 60px 60px;
-    display:flex;flex-direction:column;justify-content:flex-end;
-    padding:18px;color:#fbf6ef;
-    box-shadow:0 18px 40px -24px rgba(0,0,0,.35);
-    position:relative;overflow:hidden;
-  }
-  .swatch .label{font-family:'Fraunces',serif;font-style:italic;font-weight:300;font-size:1.1rem;line-height:1.1}
-  .swatch .hex{font-family:'Manrope',monospace;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;opacity:.85;margin-top:6px}
-  .sw-1{background:#823423}
-  .sw-2{background:#b14f3b}
-  .sw-3{background:#c97a5c;color:#fbf6ef}
-  .sw-4{background:#d9c3a8;color:#5a4438}
-  .sw-5{background:#a07550}
-  .sw-4 .hex{opacity:.7}
- 
-  /* ---------- MATERIALS LIST ---------- */
-  .materials{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--linea);border:1px solid var(--linea);border-radius:18px;overflow:hidden;margin-top:10px}
-  .mat{background:var(--paper);padding:28px 24px;display:flex;flex-direction:column;gap:8px;min-height:160px}
-  .mat .tag{font-family:'Manrope',sans-serif;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--terracota-dark);font-weight:600}
-  .mat .name{font-family:'Fraunces',serif;font-size:1.4rem;line-height:1.1;color:var(--tinta)}
-  .mat .desc{color:var(--tinta-soft);font-size:.92rem;margin-top:auto;max-width:32ch}
- 
-  /* ---------- INFO CARD ---------- */
-  .infocard{
-    background:var(--paper);border:1px solid var(--linea);border-radius:24px;
-    padding:36px 36px;display:grid;grid-template-columns:repeat(4,1fr);gap:28px;
-    box-shadow:0 30px 60px -40px rgba(130,52,35,.18);
-  }
-  .infocard .item .key{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--tinta-soft);margin-bottom:6px}
-  .infocard .item .val{font-family:'Fraunces',serif;font-size:1.2rem;color:var(--tinta);line-height:1.15}
- 
-  /* ---------- PIECES PREVIEW ---------- */
-  .pieces{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-  .piece{
-    aspect-ratio:4/5;border-radius:14px;background:var(--bg-2);
-    border:1px solid var(--linea);
-    display:flex;flex-direction:column;justify-content:space-between;
-    padding:16px;color:var(--tinta-soft);
-    transition:transform .25s ease, box-shadow .25s ease;
-  }
-  .piece:hover{transform:translateY(-2px);box-shadow:0 18px 40px -28px rgba(130,52,35,.4)}
-  .piece .scale{font-family:'Manrope',monospace;font-size:.72rem;letter-spacing:.16em;color:var(--terracota-dark);font-weight:600}
-  .piece .title{font-family:'Fraunces',serif;font-size:1.1rem;color:var(--tinta);line-height:1.15}
-  .piece svg{width:100%;flex:1;align-self:center;display:block;margin:8px 0}
- 
-  /* ---------- FOOTER ---------- */
-  footer{
-    margin-top:60px;
-    background:var(--terracota-dark);color:#fbf6ef;
-    padding:60px 28px 40px;
-  }
-  footer .inner{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:end}
-  footer h3{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(1.8rem,3.4vw,2.6rem);line-height:1.05;letter-spacing:-0.02em}
-  footer h3 em{font-style:italic;color:#f1c9b7}
-  footer .meta{font-size:.85rem;opacity:.8;line-height:1.7}
-  footer .meta strong{color:#fbf6ef;font-weight:600}
-  footer hr{border:0;border-top:1px solid rgba(251,246,239,.18);margin:36px 0 20px}
-  footer .colofon{display:flex;justify-content:space-between;font-size:.75rem;opacity:.6;letter-spacing:.12em;text-transform:uppercase}
- 
-  /* ---------- RESPONSIVE ---------- */
-  @media (max-width:880px){
-    header.hero{grid-template-columns:1fr;gap:40px;padding-top:60px}
-    .concept{grid-template-columns:1fr;gap:32px}
-    .palette{grid-template-columns:repeat(2,1fr)}
-    .materials{grid-template-columns:1fr}
-    .infocard{grid-template-columns:repeat(2,1fr)}
-    .pieces{grid-template-columns:repeat(2,1fr)}
-    footer .inner{grid-template-columns:1fr}
-  }
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..900,0..100&family=Manrope:wght@300..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
- 
-<nav>
-  <div class="row">
-    <div class="mark">TERRALUZ</div>
+
+<nav class="nav">
+  <div class="brand">TERRALUZ</div>
+  <ul class="nav-links">
+    <li><a href="#concepto">Concepto</a></li>
+    <li><a href="#paleta">Paleta</a></li>
+    <li><a href="#lenguaje">Lenguaje</a></li>
+    <li><a href="materiales/index.html">Materiales</a></li>
+    <li><a href="renders/index.html">Renders</a></li>
+  </ul>
+  <button class="menu-btn" id="menu-open" aria-label="Abrir menú">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="menu-overlay" id="menu-overlay">
+  <button class="close-btn" id="menu-close" aria-label="Cerrar menú">&times;</button>
+  <div class="brand">TERRALUZ</div>
+
+  <div class="menu-group menu-group--sections">
+    <div class="menu-label">El relato — en esta página</div>
     <ul>
+      <li><a href="#inicio">Inicio</a></li>
       <li><a href="#concepto">Concepto</a></li>
-      <li><a href="#paleta">Paleta</a></li>
-      <li><a href="#materiales">Materiales</a></li>
-      <li><a href="#piezas">Documentación</a></li>
-      <li><a href="#info">Ficha</a></li>
+      <li><a href="#paleta">Paleta cromática</a></li>
+      <li><a href="#lenguaje">Lenguaje formal</a></li>
+      <li><a href="#contexto">Contexto</a></li>
     </ul>
   </div>
-</nav>
- 
-<header class="hero">
-  <div class="left">
-    <span class="eyebrow">TFG · Diseño de interiores · Zaragoza</span>
-    <h1>Terra<span class="italic">luz</span></h1>
-    <p class="lead">Un restaurante cafetería gourmet en el centro de Zaragoza, construido sobre la fusión de <strong>sustancia y luz</strong>: tierra cocida, arcos, microcemento y una reinterpretación contemporánea de lo mediterráneo.</p>
+
+  <div class="menu-group menu-group--pages">
+    <div class="menu-label">Secciones del proyecto</div>
+    <ul>
+      <li><a href="materiales/index.html">Materiales</a></li>
+      <li><a href="renders/index.html">Renders</a></li>
+      <li><a href="espacio/index.html">Espacio y programa</a></li>
+      <li><a href="iluminacion/index.html">Iluminación</a></li>
+      <li><a href="documentacion/index.html">Documentación</a></li>
+    </ul>
   </div>
-  <div class="right">
-    <div class="arch">
-      <div class="grid-lines"></div>
-      <span class="pill">demo · alpha</span>
-    </div>
+</div>
+
+<!-- 1. HERO -->
+<header class="hero" id="inicio">
+  <svg class="arcos" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M -100 800 L -100 500 A 350 350 0 0 1 600 500 L 600 800" fill="none" stroke="#B14F3B" stroke-width="2" opacity="0.8"/>
+    <path d="M 600 800 L 600 450 A 400 400 0 0 1 1400 450 L 1400 800" fill="none" stroke="#D9C3A8" stroke-width="2" opacity="0.55"/>
+    <path d="M 200 800 L 200 600 A 250 250 0 0 1 700 600 L 700 800" fill="none" stroke="#823423" stroke-width="1.5" opacity="0.35"/>
+    <path d="M 850 800 L 850 560 A 290 290 0 0 1 1430 560 L 1430 800" fill="none" stroke="#C97A5C" stroke-width="1.5" opacity="0.4"/>
+  </svg>
+  <div class="hero-content">
+    <div class="hero-tag">Restaurante cafetería gourmet</div>
+    <h1>Terraluz</h1>
+    <p class="subtitulo">Un espacio donde <strong>sustancia + luz</strong> se funden en una experiencia sensorial integral. Una reinterpretación contemporánea de la atmósfera mediterránea.</p>
+    <div class="scroll-cue">Desliza para entrar ↓</div>
   </div>
 </header>
- 
+
+<!-- 2. CONCEPTO -->
 <section id="concepto">
-  <div class="section-head">
+  <div class="concept reveal">
     <div>
-      <div class="num">— 01</div>
-      <h2>Una fusión de <em>sustancia y luz</em> como experiencia sensorial integral.</h2>
+      <span class="section-num">— 01</span>
+      <div class="seccion-titulo" style="margin-bottom:1.5rem;">
+        <h2>Sustancia y luz, fundidos en una sola <em>atmósfera</em>.</h2>
+      </div>
+      <div class="binomio" aria-hidden="true">
+        <span>sustancia</span>
+        <span class="plus">+ luz</span>
+      </div>
     </div>
-  </div>
-  <div class="concept">
-    <div class="body">
-      <p>El concepto parte del propio nombre del proyecto: <span class="hl">TERRA + LUZ</span>. La intervención se construye sobre dos materialidades en diálogo: la tierra cocida —ladrillo, cerámica, microcemento, tonos arcilla— y la luz natural que el local ya posee gracias a sus grandes ventanas protegidas.</p>
-      <p>De esa fusión surge una estética <span class="hl">moderna, cálida y envolvente</span> que evoca lo orgánico, lo manual y una reinterpretación contemporánea de lo mediterráneo. La arquitectura de trazos curvos, arcos y volúmenes suaves favorece una circulación fluida y genera una atmósfera emocional y acogedora, alejada de lo rígido o tradicional.</p>
-    </div>
-    <div class="quote">
-      «Una propuesta gourmet que integra gastronomía, diseño y experiencia espacial.»
+    <div class="concept-text">
+      <p>El proyecto nace de la fusión de <strong>sustancia y luz</strong> como ejes de una experiencia sensorial integral: una estética moderna, cálida y envolvente, sustentada en el color terracota y las formas naturales.</p>
+      <p>A través de una paleta de tonos arcilla y rojizos, combinada con microcemento, ladrillo visto y cerámicas artesanales, el espacio evoca lo orgánico, lo manual y una reinterpretación contemporánea de la estética mediterránea.</p>
+      <p>Una propuesta gourmet que integra gastronomía, diseño y espacio en una atmósfera emocional y acogedora, deliberadamente alejada de lo rígido o tradicional.</p>
     </div>
   </div>
 </section>
- 
+
+<!-- 3. PALETA CROMÁTICA -->
 <section id="paleta">
-  <div class="section-head">
-    <div>
-      <div class="num">— 02</div>
-      <h2>Paleta <em>terracota</em>: arcilla, rojizos y luz tamizada.</h2>
+  <div class="seccion-titulo reveal">
+    <span class="section-num">— 02</span>
+    <h2>Tierra, arcilla, rojizo. <em>Calor</em>.</h2>
+    <p>Cinco tonos que sostienen la identidad del proyecto y conducen la luz por el espacio.</p>
+  </div>
+  <div class="swatches reveal">
+    <div class="swatch" style="background:#B14F3B;">
+      <div class="swatch-label"><div class="nombre">Terracota</div><div class="hex">#B14F3B</div></div>
+    </div>
+    <div class="swatch" style="background:#823423;">
+      <div class="swatch-label"><div class="nombre">Terracota oscura</div><div class="hex">#823423</div></div>
+    </div>
+    <div class="swatch" style="background:#C97A5C;">
+      <div class="swatch-label"><div class="nombre">Arcilla</div><div class="hex">#C97A5C</div></div>
+    </div>
+    <div class="swatch" style="background:#A07550;">
+      <div class="swatch-label"><div class="nombre">Madera</div><div class="hex">#A07550</div></div>
+    </div>
+    <div class="swatch is-light" style="background:#F4ECE3;">
+      <div class="swatch-label"><div class="nombre">Crema</div><div class="hex">#F4ECE3</div></div>
     </div>
   </div>
-  <div class="palette">
-    <div class="swatch sw-1"><div class="label">Terracota oscuro</div><div class="hex">#823423</div></div>
-    <div class="swatch sw-2"><div class="label">Terracota</div><div class="hex">#B14F3B</div></div>
-    <div class="swatch sw-3"><div class="label">Arcilla</div><div class="hex">#C97A5C</div></div>
-    <div class="swatch sw-4"><div class="label">Microcemento</div><div class="hex">#D9C3A8</div></div>
-  </div>
 </section>
- 
+
+<!-- 4. MATERIALES (preview) -->
 <section id="materiales">
-  <div class="section-head">
-    <div>
-      <div class="num">— 03</div>
-      <h2>Materiales <em>artesanales</em> y orgánicos.</h2>
-    </div>
+  <div class="seccion-titulo reveal">
+    <span class="section-num">— 03</span>
+    <h2>Materiales con <em>memoria</em>.</h2>
+    <p>Texturas y acabados que sostienen la atmósfera del proyecto.</p>
   </div>
-  <div class="materials">
-    <div class="mat">
-      <span class="tag">Acabado continuo</span>
+  <div class="grid-4 reveal">
+    <div class="card-material">
+      <div class="tag">Paramentos · Suelos</div>
       <div class="name">Microcemento</div>
-      <div class="desc">Acabado continuo en paramentos y suelos. Calma y unidad cromática.</div>
+      <div class="desc">Continuidad mineral entre suelos y muros.</div>
     </div>
-    <div class="mat">
-      <span class="tag">Pieza artesanal</span>
+    <div class="card-material">
+      <div class="tag">Paramentos</div>
       <div class="name">Ladrillo visto</div>
-      <div class="desc">Celosías caladas que tamizan la luz y dividen ambientes sin cerrarlos.</div>
+      <div class="desc">Textura artesanal de carácter orgánico.</div>
     </div>
-    <div class="mat">
-      <span class="tag">Pieza artesanal</span>
+    <div class="card-material">
+      <div class="tag">Revestimientos</div>
       <div class="name">Cerámica artesanal</div>
-      <div class="desc">Detalles, revestimientos y elementos identitarios del proyecto.</div>
+      <div class="desc">Piezas hechas a mano que filtran la luz.</div>
     </div>
-    <div class="mat">
-      <span class="tag">Natural</span>
-      <div class="name">Madera natural</div>
-      <div class="desc">Mobiliario de mesas y sillas tipo Wishbone. Calidez y textura.</div>
-    </div>
-    <div class="mat">
-      <span class="tag">Dispositivo</span>
-      <div class="name">Arcos</div>
-      <div class="desc">Lenguaje formal estructurante en aperturas y paramentos.</div>
-    </div>
-    <div class="mat">
-      <span class="tag">Estrategia</span>
-      <div class="name">Luz natural</div>
-      <div class="desc">Aprovechamiento de la abundante luz que entra por las ventanas protegidas.</div>
+    <div class="card-material">
+      <div class="tag">Mobiliario</div>
+      <div class="name">Madera</div>
+      <div class="desc">Calidez natural en mobiliario y detalles.</div>
     </div>
   </div>
+  <a class="cta-link reveal" href="materiales/index.html">Explorar materiales →</a>
 </section>
- 
-<section id="piezas">
-  <div class="section-head">
+
+<!-- 5. LENGUAJE FORMAL (dark + nested arches) -->
+<section class="dark-section" id="lenguaje">
+  <div class="dark-inner reveal">
     <div>
-      <div class="num">— 04</div>
-      <h2>Documentación del <em>panel</em>.</h2>
+      <span class="eyebrow">04 — Lenguaje formal</span>
+      <h2>Trazos curvos, arcos, <em>volúmenes suaves</em>.</h2>
+      <p>La arquitectura interior se construye con trazos curvos, arcos y volúmenes suaves. Esta elección formal favorece una circulación fluida y genera una atmósfera emocional y acogedora.</p>
+      <p>El arco aparece como elemento estructural y simbólico, vinculando la propuesta con la tradición arquitectónica mediterránea sin imitarla de forma literal.</p>
     </div>
-  </div>
-  <div class="pieces">
-    <div class="piece">
-      <div class="title">Planta general</div>
-      <svg viewBox="0 0 120 100" fill="none" stroke="#823423" stroke-width="1.5">
-        <rect x="6" y="14" width="108" height="72" rx="2"/>
-        <line x1="48" y1="14" x2="48" y2="86"/>
-        <line x1="82" y1="14" x2="82" y2="86"/>
-        <line x1="6" y1="50" x2="48" y2="50"/>
-        <circle cx="92" cy="32" r="3" fill="#b14f3b" stroke="none"/>
-        <circle cx="98" cy="32" r="3" fill="#b14f3b" stroke="none"/>
-        <circle cx="92" cy="42" r="3" fill="#b14f3b" stroke="none"/>
-        <circle cx="98" cy="42" r="3" fill="#b14f3b" stroke="none"/>
-        <circle cx="20" cy="32" r="3" fill="#b14f3b" stroke="none"/>
-        <circle cx="32" cy="32" r="3" fill="#b14f3b" stroke="none"/>
+    <div class="arch-illustration">
+      <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M 60 380 L 60 180 A 140 140 0 0 1 340 180 L 340 380" stroke="#D9C3A8" stroke-width="1.5" fill="none" opacity="0.4"/>
+        <path d="M 95 380 L 95 200 A 105 105 0 0 1 305 200 L 305 380" stroke="#C97A5C" stroke-width="1.5" fill="none" opacity="0.6"/>
+        <path d="M 130 380 L 130 220 A 70 70 0 0 1 270 220 L 270 380" stroke="#B14F3B" stroke-width="1.5" fill="none" opacity="0.85"/>
+        <path d="M 165 380 L 165 240 A 35 35 0 0 1 235 240 L 235 380" stroke="#B14F3B" stroke-width="2" fill="#B14F3B" fill-opacity="0.15"/>
+        <line x1="40" y1="380" x2="360" y2="380" stroke="#D9C3A8" stroke-width="1" opacity="0.3"/>
       </svg>
-      <div class="scale">ESCALA 1/125</div>
-    </div>
-    <div class="piece">
-      <div class="title">Alzado fachada</div>
-      <svg viewBox="0 0 120 100" fill="none" stroke="#823423" stroke-width="1.5">
-        <rect x="10" y="10" width="100" height="80" rx="1"/>
-        <rect x="20" y="22" width="12" height="14"/>
-        <rect x="40" y="22" width="12" height="14"/>
-        <rect x="60" y="22" width="12" height="14"/>
-        <rect x="80" y="22" width="12" height="14"/>
-        <rect x="20" y="44" width="12" height="14"/>
-        <rect x="40" y="44" width="12" height="14"/>
-        <rect x="60" y="44" width="12" height="14"/>
-        <rect x="80" y="44" width="12" height="14"/>
-        <rect x="20" y="66" width="22" height="18" fill="#b14f3b" stroke="none" opacity=".7"/>
-        <rect x="50" y="66" width="22" height="18"/>
-        <rect x="80" y="66" width="22" height="18" fill="#b14f3b" stroke="none" opacity=".7"/>
-      </svg>
-      <div class="scale">ESCALA 1/125</div>
-    </div>
-    <div class="piece">
-      <div class="title">Sección interior A</div>
-      <svg viewBox="0 0 120 100" fill="none" stroke="#823423" stroke-width="1.5">
-        <line x1="6" y1="86" x2="114" y2="86"/>
-        <line x1="6" y1="14" x2="114" y2="14"/>
-        <path d="M 20 86 L 20 50 Q 20 36 34 36 Q 48 36 48 50 L 48 86"/>
-        <path d="M 60 86 L 60 50 Q 60 36 74 36 Q 88 36 88 50 L 88 86"/>
-        <line x1="6" y1="60" x2="14" y2="60"/>
-        <rect x="96" y="68" width="14" height="18" fill="#c97a5c" stroke="none" opacity=".6"/>
-      </svg>
-      <div class="scale">ESCALA 1/100</div>
-    </div>
-    <div class="piece">
-      <div class="title">Sección interior B</div>
-      <svg viewBox="0 0 120 100" fill="none" stroke="#823423" stroke-width="1.5">
-        <line x1="6" y1="86" x2="114" y2="86"/>
-        <line x1="6" y1="14" x2="114" y2="14"/>
-        <path d="M 14 86 L 14 56 Q 14 44 26 44 Q 38 44 38 56 L 38 86"/>
-        <g fill="#b14f3b" stroke="none" opacity=".55">
-          <rect x="50" y="50" width="4" height="4"/>
-          <rect x="56" y="50" width="4" height="4"/>
-          <rect x="62" y="50" width="4" height="4"/>
-          <rect x="50" y="56" width="4" height="4"/>
-          <rect x="56" y="56" width="4" height="4"/>
-          <rect x="62" y="56" width="4" height="4"/>
-          <rect x="50" y="62" width="4" height="4"/>
-          <rect x="56" y="62" width="4" height="4"/>
-          <rect x="62" y="62" width="4" height="4"/>
-          <rect x="50" y="68" width="4" height="4"/>
-          <rect x="56" y="68" width="4" height="4"/>
-          <rect x="62" y="68" width="4" height="4"/>
-        </g>
-        <path d="M 82 86 L 82 56 Q 82 44 94 44 Q 106 44 106 56 L 106 86"/>
-      </svg>
-      <div class="scale">ESCALA 1/100</div>
     </div>
   </div>
 </section>
- 
-<section id="info">
-  <div class="section-head">
+
+<!-- 6. RENDERS (preview) -->
+<section id="renders">
+  <div class="seccion-titulo reveal">
+    <span class="section-num">— 05</span>
+    <h2>Una primera mirada al <em>interior</em>.</h2>
+    <p>Vistas del espacio bajo su propia luz.</p>
+  </div>
+  <div class="grid-3 reveal">
+    <div class="media-frame">
+      <img src="img/renders/edificio-diurno.jpg" alt="Fachada del local de día" onerror="mediaFallback(this)">
+      <div class="placeholder">edificio-diurno.jpg</div>
+    </div>
+    <div class="media-frame">
+      <img src="img/renders/interior-celosia.jpg" alt="Comedor bajo la celosía cerámica" onerror="mediaFallback(this)">
+      <div class="placeholder">interior-celosia.jpg</div>
+    </div>
+    <div class="media-frame">
+      <img src="img/renders/edificio-nocturno.jpg" alt="Fachada del local de noche, iluminada" onerror="mediaFallback(this)">
+      <div class="placeholder">edificio-nocturno.jpg</div>
+    </div>
+  </div>
+  <a class="cta-link reveal" href="renders/index.html">Ver todos los renders →</a>
+</section>
+
+<!-- 7. CONTEXTO / ESPACIO -->
+<section id="contexto">
+  <div class="seccion-titulo reveal">
+    <span class="section-num">— 06</span>
+    <h2>Un local con historia y con <em>reglas</em>.</h2>
+    <p>El punto de partida: un local urbano de alto flujo peatonal, con condicionantes que el proyecto convierte en oportunidades.</p>
+  </div>
+  <div class="grid-2 reveal">
     <div>
-      <div class="num">— 05</div>
-      <h2>Ficha del <em>proyecto</em>.</h2>
+      <p style="color:var(--tinta-soft);line-height:1.8;">El local se sitúa en una zona comercial concurrida del centro de una ciudad mediterránea. La relación visual con la calle se entiende como un activo: no un escaparate convencional, sino un mecanismo para anticipar desde fuera la atmósfera cálida del interior.</p>
+    </div>
+    <div>
+      <ul class="constraints">
+        <li>Fachada y ventanas <strong>protegidas</strong>; no admiten modificación.</li>
+        <li>Diferencias de altura entre exterior e interior: reto de accesibilidad, oportunidad para zonificar.</li>
+        <li>Abundante <strong>luz natural</strong>, asumida como material protagonista.</li>
+        <li>Intervención centrada en el <strong>diseño interior</strong>.</li>
+      </ul>
     </div>
   </div>
-  <div class="infocard">
-    <div class="item"><div class="key">Tipología</div><div class="val">Restaurante cafetería gourmet</div></div>
-    <div class="item"><div class="key">Ubicación</div><div class="val">Centro de Zaragoza</div></div>
-    <div class="item"><div class="key">Autora</div><div class="val">Klara Gracia Alútiz</div></div>
-    <div class="item"><div class="key">Documento</div><div class="val">Panel TFG</div></div>
-    <div class="item"><div class="key">Escalas</div><div class="val">1/125 · 1/100</div></div>
-    <div class="item"><div class="key">Estética</div><div class="val">Mediterráneo contemporáneo</div></div>
-    <div class="item"><div class="key">Lenguaje formal</div><div class="val">Curvas, arcos, volúmenes suaves</div></div>
-    <div class="item"><div class="key">Atmósfera</div><div class="val">Cálida, envolvente, emocional</div></div>
-  </div>
+  <a class="cta-link reveal" href="espacio/index.html">Recorrer el espacio y el programa →</a>
 </section>
- 
+
+<!-- 8. ILUMINACIÓN (teaser) -->
+<section id="iluminacion-teaser">
+  <div class="seccion-titulo reveal">
+    <span class="section-num">— 07</span>
+    <h2>La luz como <em>material</em>.</h2>
+    <p>Luz natural filtrada por celosías cerámicas y una luz artificial cálida que prolonga la atmósfera al caer la tarde.</p>
+  </div>
+  <a class="cta-link reveal" href="iluminacion/index.html">Descubrir la estrategia de luz →</a>
+</section>
+
+<!-- 9. DOCUMENTACIÓN (preview) -->
+<section id="documentacion">
+  <div class="seccion-titulo reveal">
+    <span class="section-num">— 08</span>
+    <h2>Planimetría y <em>secciones</em>.</h2>
+    <p>La traducción técnica del proyecto.</p>
+  </div>
+  <div class="grid-3 reveal">
+    <div class="media-frame">
+      <img src="img/planos/seccion-celosia.jpg" alt="Sección por el comedor y la celosía" onerror="mediaFallback(this)">
+      <div class="placeholder">seccion-celosia.jpg</div>
+    </div>
+    <div class="media-frame">
+      <img src="img/planos/seccion-cocina.jpg" alt="Sección por el ámbito de cocina" onerror="mediaFallback(this)">
+      <div class="placeholder">seccion-cocina.jpg</div>
+    </div>
+    <div class="media-frame">
+      <img src="img/planos/seccion-banos.jpg" alt="Sección por el núcleo de baños" onerror="mediaFallback(this)">
+      <div class="placeholder">seccion-banos.jpg</div>
+    </div>
+  </div>
+  <a class="cta-link reveal" href="documentacion/index.html">Ver documentación completa →</a>
+</section>
+
 <footer>
-  <div class="inner">
-    <h3>Una propuesta gourmet que integra <em>gastronomía, diseño y experiencia espacial.</em></h3>
-    <div class="meta">
-      <strong>TERRALUZ</strong><br>
-      Trabajo Fin de Grado<br>
-      Klara Gracia Alútiz<br>
-      Zaragoza, España
-    </div>
-  </div>
-  <hr>
-  <div class="inner">
-    <div class="colofon">Demo · Alpha</div>
-    <div class="colofon" style="text-align:right">v0.1</div>
-  </div>
+  <div class="tagline">Sustancia <em>+</em> luz</div>
+  <div class="meta">TERRALUZ · Restaurante cafetería gourmet</div>
 </footer>
- 
+
+<script src="js/main.js"></script>
 </body>
 </html>

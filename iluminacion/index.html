@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TERRALUZ — Iluminación</title>
+<link rel="icon" type="image/png" href="../favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..900,0..100&family=Manrope:wght@300..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="brand">TERRALUZ</div>
+  <ul class="nav-links">
+    <li><a href="../index.html#concepto">Concepto</a></li>
+    <li><a href="../index.html#paleta">Paleta</a></li>
+    <li><a href="../materiales/index.html">Materiales</a></li>
+    <li><a href="../renders/index.html">Renders</a></li>
+    <li><a href="index.html">Iluminación</a></li>
+  </ul>
+  <button class="menu-btn" id="menu-open" aria-label="Abrir menú">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="menu-overlay" id="menu-overlay">
+  <button class="close-btn" id="menu-close" aria-label="Cerrar menú">&times;</button>
+  <div class="brand">TERRALUZ</div>
+  <div class="menu-group menu-group--sections">
+    <div class="menu-label">El relato — página de inicio</div>
+    <ul>
+      <li><a href="../index.html#inicio">Inicio</a></li>
+      <li><a href="../index.html#concepto">Concepto</a></li>
+      <li><a href="../index.html#paleta">Paleta cromática</a></li>
+      <li><a href="../index.html#lenguaje">Lenguaje formal</a></li>
+      <li><a href="../index.html#contexto">Contexto</a></li>
+    </ul>
+  </div>
+  <div class="menu-group menu-group--pages">
+    <div class="menu-label">Secciones del proyecto</div>
+    <ul>
+      <li><a href="../materiales/index.html">Materiales</a></li>
+      <li><a href="../renders/index.html">Renders</a></li>
+      <li><a href="../espacio/index.html">Espacio y programa</a></li>
+      <li><a href="index.html">Iluminación</a></li>
+      <li><a href="../documentacion/index.html">Documentación</a></li>
+    </ul>
+  </div>
+</div>
+
+<a class="back-link" href="../index.html">← Volver al proyecto</a>
+
+<section>
+  <div class="seccion-titulo reveal">
+    <span class="eyebrow">Iluminación</span>
+    <h2>La luz como <em>material</em> del proyecto.</h2>
+    <p>La luz natural es el material protagonista. La artificial la prolonga al caer la tarde, manteniendo la misma temperatura cálida y envolvente.</p>
+  </div>
+
+  <div class="grid-2 reveal">
+    <div>
+      <div class="media-frame">
+        <img src="../img/iluminacion/luz-natural.jpg" alt="Luz natural filtrada por celosías" onerror="mediaFallback(this)">
+        <div class="placeholder">luz-natural.jpg</div>
+      </div>
+      <div class="media-caption">
+        <div class="nombre">Luz natural</div>
+        <div class="detalle">Filtrada por las celosías cerámicas, dibuja el paso del día sobre los muros.</div>
+      </div>
+    </div>
+    <div>
+      <div class="media-frame">
+        <img src="../img/iluminacion/luz-artificial.jpg" alt="Luz artificial cálida de tarde" onerror="mediaFallback(this)">
+        <div class="placeholder">luz-artificial.jpg</div>
+      </div>
+      <div class="media-caption">
+        <div class="nombre">Luz artificial</div>
+        <div class="detalle">Cálida e indirecta, refuerza los arcos y los volúmenes al anochecer.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="seccion-titulo reveal">
+    <h2>Estrategia lumínica</h2>
+    <p>Tres registros que conviven en el mismo espacio.</p>
+  </div>
+  <div class="grid-3 reveal">
+    <div class="card-material">
+      <div class="tag">Día</div>
+      <div class="name">Luz filtrada</div>
+      <div class="desc">Las celosías tamizan la entrada de sol y proyectan sombras texturadas.</div>
+    </div>
+    <div class="card-material">
+      <div class="tag">Ambiente</div>
+      <div class="name">Luz indirecta</div>
+      <div class="desc">Bañado de muros y arcos que subraya la curvatura y la materialidad.</div>
+    </div>
+    <div class="card-material">
+      <div class="tag">Acento</div>
+      <div class="name">Luz puntual</div>
+      <div class="desc">Foco cálido sobre mesa y barra para marcar el ritmo del recorrido.</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="tagline">Sustancia <em>+</em> luz</div>
+  <div class="meta">TERRALUZ</div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TERRALUZ — Espacio y programa</title>
+<link rel="icon" type="image/png" href="../favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..900,0..100&family=Manrope:wght@300..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="brand">TERRALUZ</div>
+  <ul class="nav-links">
+    <li><a href="../index.html#concepto">Concepto</a></li>
+    <li><a href="../index.html#paleta">Paleta</a></li>
+    <li><a href="../materiales/index.html">Materiales</a></li>
+    <li><a href="../renders/index.html">Renders</a></li>
+    <li><a href="index.html">Espacio</a></li>
+  </ul>
+  <button class="menu-btn" id="menu-open" aria-label="Abrir menú">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="menu-overlay" id="menu-overlay">
+  <button class="close-btn" id="menu-close" aria-label="Cerrar menú">&times;</button>
+  <div class="brand">TERRALUZ</div>
+  <div class="menu-group menu-group--sections">
+    <div class="menu-label">El relato — página de inicio</div>
+    <ul>
+      <li><a href="../index.html#inicio">Inicio</a></li>
+      <li><a href="../index.html#concepto">Concepto</a></li>
+      <li><a href="../index.html#paleta">Paleta cromática</a></li>
+      <li><a href="../index.html#lenguaje">Lenguaje formal</a></li>
+      <li><a href="../index.html#contexto">Contexto</a></li>
+    </ul>
+  </div>
+  <div class="menu-group menu-group--pages">
+    <div class="menu-label">Secciones del proyecto</div>
+    <ul>
+      <li><a href="../materiales/index.html">Materiales</a></li>
+      <li><a href="../renders/index.html">Renders</a></li>
+      <li><a href="index.html">Espacio y programa</a></li>
+      <li><a href="../iluminacion/index.html">Iluminación</a></li>
+      <li><a href="../documentacion/index.html">Documentación</a></li>
+    </ul>
+  </div>
+</div>
+
+<a class="back-link" href="../index.html">← Volver al proyecto</a>
+
+<section>
+  <div class="seccion-titulo reveal">
+    <span class="eyebrow">Espacio y programa</span>
+    <h2>Un recorrido que <em>zonifica</em> sin separar.</h2>
+    <p>El programa aprovecha las diferencias de altura del local para ordenar el espacio en ámbitos de carácter distinto, manteniendo la continuidad visual y material.</p>
+  </div>
+
+  <div class="grid-2 reveal">
+    <div>
+      <div class="media-frame">
+        <img src="../img/espacio/zonificacion.jpg" alt="Esquema de zonificación" onerror="mediaFallback(this)">
+        <div class="placeholder">zonificacion.jpg</div>
+      </div>
+      <div class="media-caption">
+        <div class="nombre">Zonificación</div>
+        <div class="detalle">Ámbitos articulados por los arcos y los cambios de nivel.</div>
+      </div>
+    </div>
+    <div>
+      <div class="media-frame">
+        <img src="../img/espacio/recorrido.jpg" alt="Recorrido y circulación" onerror="mediaFallback(this)">
+        <div class="placeholder">recorrido.jpg</div>
+      </div>
+      <div class="media-caption">
+        <div class="nombre">Recorrido</div>
+        <div class="detalle">Circulación fluida desde el acceso hasta el comedor.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="seccion-titulo reveal">
+    <h2>Programa</h2>
+    <p>Las piezas que componen el local.</p>
+  </div>
+  <div class="grid-4 reveal">
+    <div class="card-material">
+      <div class="tag">Umbral</div>
+      <div class="name">Acceso y barra</div>
+      <div class="desc">Recibe desde la calle y resuelve la diferencia de cota con el interior.</div>
+    </div>
+    <div class="card-material">
+      <div class="tag">Estancia</div>
+      <div class="name">Sala principal</div>
+      <div class="desc">Núcleo social bajo la luz filtrada por las celosías cerámicas.</div>
+    </div>
+    <div class="card-material">
+      <div class="tag">Estancia</div>
+      <div class="name">Comedor</div>
+      <div class="desc">Ámbito más recogido, en relación directa con la luz natural.</div>
+    </div>
+    <div class="card-material">
+      <div class="tag">Servicio</div>
+      <div class="name">Aseos y office</div>
+      <div class="desc">Piezas de apoyo integradas en el lenguaje material del conjunto.</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="ficha reveal">
+    <div class="ficha-item"><div class="key">Tipología</div><div class="val">Restaurante gourmet</div></div>
+    <div class="ficha-item"><div class="key">Programa</div><div class="val">Cafetería + comedor</div></div>
+    <div class="ficha-item"><div class="key">Intervención</div><div class="val">Interiorismo integral</div></div>
+    <div class="ficha-item"><div class="key">Superficie</div><div class="val">A definir</div></div>
+  </div>
+</section>
+
+<footer>
+  <div class="tagline">Sustancia <em>+</em> luz</div>
+  <div class="meta">TERRALUZ</div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TERRALUZ — Renders</title>
+<link rel="icon" type="image/png" href="../favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..900,0..100&family=Manrope:wght@300..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="brand">TERRALUZ</div>
+  <ul class="nav-links">
+    <li><a href="../index.html#concepto">Concepto</a></li>
+    <li><a href="../index.html#paleta">Paleta</a></li>
+    <li><a href="../materiales/index.html">Materiales</a></li>
+    <li><a href="index.html">Renders</a></li>
+    <li><a href="../documentacion/index.html">Documentación</a></li>
+  </ul>
+  <button class="menu-btn" id="menu-open" aria-label="Abrir menú">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="menu-overlay" id="menu-overlay">
+  <button class="close-btn" id="menu-close" aria-label="Cerrar menú">&times;</button>
+  <div class="brand">TERRALUZ</div>
+  <div class="menu-group menu-group--sections">
+    <div class="menu-label">El relato — página de inicio</div>
+    <ul>
+      <li><a href="../index.html#inicio">Inicio</a></li>
+      <li><a href="../index.html#concepto">Concepto</a></li>
+      <li><a href="../index.html#paleta">Paleta cromática</a></li>
+      <li><a href="../index.html#lenguaje">Lenguaje formal</a></li>
+      <li><a href="../index.html#contexto">Contexto</a></li>
+    </ul>
+  </div>
+  <div class="menu-group menu-group--pages">
+    <div class="menu-label">Secciones del proyecto</div>
+    <ul>
+      <li><a href="../materiales/index.html">Materiales</a></li>
+      <li><a href="index.html">Renders</a></li>
+      <li><a href="../espacio/index.html">Espacio y programa</a></li>
+      <li><a href="../iluminacion/index.html">Iluminación</a></li>
+      <li><a href="../documentacion/index.html">Documentación</a></li>
+    </ul>
+  </div>
+</div>
+
+<a class="back-link" href="../index.html">← Volver al proyecto</a>
+
+<section>
+  <div class="seccion-titulo reveal">
+    <span class="eyebrow">Galería</span>
+    <h2>Renders</h2>
+    <p>Vistas interiores del proyecto.</p>
+  </div>
+
+  <div class="grid-4 reveal">
+    <div>
+      <div class="media-frame">
+        <img src="../img/renders/edificio-diurno.jpg" alt="Fachada del local de día" onerror="mediaFallback(this)">
+        <div class="placeholder">edificio-diurno.jpg</div>
+      </div>
+      <div class="media-caption"><div class="detalle">Fachada de día</div></div>
+    </div>
+    <div>
+      <div class="media-frame">
+        <img src="../img/renders/edificio-nocturno.jpg" alt="Fachada del local de noche, iluminada" onerror="mediaFallback(this)">
+        <div class="placeholder">edificio-nocturno.jpg</div>
+      </div>
+      <div class="media-caption"><div class="detalle">Fachada de noche</div></div>
+    </div>
+    <div>
+      <div class="media-frame">
+        <img src="../img/renders/interior-celosia.jpg" alt="Comedor bajo la celosía cerámica" onerror="mediaFallback(this)">
+        <div class="placeholder">interior-celosia.jpg</div>
+      </div>
+      <div class="media-caption"><div class="detalle">Comedor bajo la celosía</div></div>
+    </div>
+    <div>
+      <div class="media-frame">
+        <img src="../img/renders/detalle-fachada.jpg" alt="Detalle del acceso y los escaparates" onerror="mediaFallback(this)">
+        <div class="placeholder">detalle-fachada.jpg</div>
+      </div>
+      <div class="media-caption"><div class="detalle">Detalle de acceso</div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="tagline">Sustancia <em>+</em> luz</div>
+  <div class="meta">TERRALUZ</div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
