@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TERRALUZ — Documentación</title>
+<title>TERRALUZ — Planimetría</title>
 <link rel="icon" type="image/png" href="../favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,12 +15,11 @@
 <nav class="nav">
   <a class="brand" href="../index.html#inicio">TERRALUZ</a>
   <ul class="nav-links">
-    <li><a href="../index.html#concepto">Concepto</a></li>
-    <li><a href="../index.html#paleta">Paleta</a></li>
+    <li><a href="../index.html#inicio">Inicio</a></li>
     <li><a href="../materiales/index.html">Materiales</a></li>
     <li><a href="../renders/index.html">Renders</a></li>
-    <li><a href="index.html">Documentación</a></li>
     <li><a href="../inspiracion/index.html">Inspiración</a></li>
+    <li><a href="index.html">Planimetría</a></li>
     <li><a href="../instalaciones/index.html">Instalaciones</a></li>
   </ul>
   <button class="menu-btn" id="menu-open" aria-label="Abrir menú">
@@ -31,25 +30,14 @@
 <div class="menu-overlay" id="menu-overlay">
   <button class="close-btn" id="menu-close" aria-label="Cerrar menú">&times;</button>
   <a class="brand" href="../index.html#inicio">TERRALUZ</a>
-  <div class="menu-group menu-group--sections">
-    <div class="menu-label">El relato — página de inicio</div>
-    <ul>
-      <li><a href="../index.html#inicio">Inicio</a></li>
-      <li><a href="../index.html#concepto">Concepto</a></li>
-      <li><a href="../index.html#paleta">Paleta cromática</a></li>
-      <li><a href="../index.html#lenguaje">Lenguaje formal</a></li>
-      <li><a href="../index.html#contexto">Contexto</a></li>
-    </ul>
-  </div>
   <div class="menu-group menu-group--pages">
     <div class="menu-label">Secciones del proyecto</div>
     <ul>
-      <li><a href="../inspiracion/index.html">Inspiración</a></li>
+      <li><a href="../index.html#inicio">Inicio</a></li>
       <li><a href="../materiales/index.html">Materiales</a></li>
       <li><a href="../renders/index.html">Renders</a></li>
-      <li><a href="../espacio/index.html">Espacio y programa</a></li>
-      <li><a href="../iluminacion/index.html">Iluminación</a></li>
-      <li><a href="index.html">Documentación</a></li>
+      <li><a href="../inspiracion/index.html">Inspiración</a></li>
+      <li><a href="index.html">Planimetría</a></li>
       <li><a href="../instalaciones/index.html">Instalaciones</a></li>
     </ul>
   </div>
@@ -59,14 +47,14 @@
 
 <section>
   <div class="seccion-titulo reveal">
-    <span class="eyebrow">Planimetría</span>
-    <h2>Documentación</h2>
+    <span class="eyebrow">Secciones y plantas</span>
+    <h2>Planimetría</h2>
     <p>Piezas gráficas que describen el proyecto.</p>
   </div>
 
   <div class="grid-4 reveal">
     <div>
-      <div class="media-frame">
+      <div class="media-frame media-frame--zoom">
         <img src="../img/planos/seccion-celosia.jpg" alt="Sección por el comedor y la celosía" onerror="mediaFallback(this)">
         <div class="placeholder">seccion-celosia.jpg</div>
       </div>
@@ -76,7 +64,7 @@
       </div>
     </div>
     <div>
-      <div class="media-frame">
+      <div class="media-frame media-frame--zoom">
         <img src="../img/planos/seccion-cocina.jpg" alt="Sección por el ámbito de cocina" onerror="mediaFallback(this)">
         <div class="placeholder">seccion-cocina.jpg</div>
       </div>
@@ -86,7 +74,7 @@
       </div>
     </div>
     <div>
-      <div class="media-frame">
+      <div class="media-frame media-frame--zoom">
         <img src="../img/planos/seccion-banos.jpg" alt="Sección por el núcleo de baños" onerror="mediaFallback(this)">
         <div class="placeholder">seccion-banos.jpg</div>
       </div>
@@ -96,7 +84,7 @@
       </div>
     </div>
     <div>
-      <div class="media-frame">
+      <div class="media-frame media-frame--zoom">
         <img src="../img/planos/planta-general.jpg" alt="Planta general" onerror="mediaFallback(this)">
         <div class="placeholder">planta-general.jpg</div>
       </div>
@@ -108,10 +96,56 @@
   </div>
 </section>
 
+<section>
+  <div class="seccion-titulo reveal">
+    <span class="eyebrow">Alzados</span>
+    <h2>Fachadas</h2>
+    <p>Los tres alzados exteriores del edificio.</p>
+  </div>
+
+  <div class="grid-3 reveal">
+    <div>
+      <div class="media-frame media-frame--fit media-frame--zoom">
+        <img src="../img/planos/fachada-este.jpg" alt="Alzado de la fachada este" onerror="mediaFallback(this)">
+        <div class="placeholder">fachada-este.jpg</div>
+      </div>
+      <div class="media-caption">
+        <div class="nombre">Fachada este</div>
+        <div class="detalle">Acceso principal, rotulación y escaparates.</div>
+      </div>
+    </div>
+    <div>
+      <div class="media-frame media-frame--fit media-frame--zoom">
+        <img src="../img/planos/fachada-oeste.jpg" alt="Alzado de la fachada oeste" onerror="mediaFallback(this)">
+        <div class="placeholder">fachada-oeste.jpg</div>
+      </div>
+      <div class="media-caption">
+        <div class="nombre">Fachada oeste</div>
+        <div class="detalle">Alzado posterior, composición de huecos.</div>
+      </div>
+    </div>
+    <div>
+      <div class="media-frame media-frame--fit media-frame--zoom">
+        <img src="../img/planos/fachada-sur.jpg" alt="Alzado de la fachada sur" onerror="mediaFallback(this)">
+        <div class="placeholder">fachada-sur.jpg</div>
+      </div>
+      <div class="media-caption">
+        <div class="nombre">Fachada sur</div>
+        <div class="detalle">Escaparates corridos y relación con el interior.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <footer>
-  <div class="tagline">Sustancia <em>+</em> luz</div>
-  <div class="meta">TERRALUZ</div>
+  <div class="tagline">Terraluz</div>
+  <div class="meta">Restaurante cafetería gourmet</div>
 </footer>
+
+<div class="lightbox-overlay" id="lightbox-overlay">
+  <button class="lightbox-close" id="lightbox-close" aria-label="Cerrar imagen">&times;</button>
+  <img id="lightbox-img" src="" alt="">
+</div>
 
 <script src="../js/main.js"></script>
 </body>

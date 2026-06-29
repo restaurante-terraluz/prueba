@@ -73,21 +73,19 @@ section{padding:80px 28px;max-width:var(--max-w);margin:0 auto;position:relative
 /* ---------- NAV ---------- */
 .nav{
   position:sticky;top:0;z-index:50;
-  display:flex;align-items:center;justify-content:space-between;
+  display:flex;align-items:center;justify-content:space-between;gap:18px;
   padding:16px 28px;
-  background:rgba(244,236,227,.72);
-  backdrop-filter:saturate(140%) blur(10px);
-  -webkit-backdrop-filter:saturate(140%) blur(10px);
+  background:var(--bg);
   border-bottom:1px solid var(--linea);
 }
 .nav .brand{
   font-family:'Fraunces',serif;font-weight:500;
-  font-size:1.15rem;letter-spacing:.18em;color:var(--terracota);
+  font-size:1.15rem;letter-spacing:.18em;color:var(--terracota-dark);
   transition:opacity .2s;
 }
 a.brand{cursor:pointer;}
 a.brand:hover{opacity:.68;}
-.nav-links{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:18px 24px;}
+.nav-links{flex:1;display:flex;flex-wrap:wrap;justify-content:center;gap:18px 24px;}
 .nav-links a{
   font-size:.86rem;font-weight:500;letter-spacing:.12em;
   text-transform:uppercase;color:var(--tinta-soft);transition:color .25s;
@@ -98,7 +96,7 @@ a.brand:hover{opacity:.68;}
   background:none;border:none;cursor:pointer;
   display:flex;flex-direction:column;gap:5px;padding:6px;
 }
-.menu-btn span{width:24px;height:2px;background:var(--tinta);display:block;}
+.menu-btn span{width:24px;height:2px;background:var(--terracota-dark);display:block;}
 
 @media (max-width:880px){.nav-links{display:none;}}
 @media (max-width:600px){.nav{padding:14px 20px;}}
@@ -210,6 +208,12 @@ a.brand:hover{opacity:.68;}
 @media (max-width:560px){
   .grid-2,.grid-3{grid-template-columns:1fr;}
 }
+
+/* ---------- GRID 3 CENTRADO (filas incompletas centradas, p.ej. 3+2) ---------- */
+.grid-3--centered{display:flex;flex-wrap:wrap;justify-content:center;}
+.grid-3--centered > *{flex:0 1 calc(33.333% - 16px);}
+@media (max-width:880px){.grid-3--centered > *{flex-basis:calc(50% - 12px);}}
+@media (max-width:560px){.grid-3--centered > *{flex-basis:100%;}}
 
 /* ---------- MEDIA FRAME / PLACEHOLDER ---------- */
 .media-frame{
@@ -336,6 +340,30 @@ footer .meta{font-size:.85rem;opacity:.8;line-height:1.7;margin-top:1rem;}
 .media-frame--contain{background:var(--bg-2);}
 .media-frame--contain img{object-fit:contain;}
 
+.media-frame--zoom{cursor:zoom-in;}
+.media-frame--zoom img{transition:transform .45s cubic-bezier(.2,.8,.2,1);}
+.media-frame--zoom:hover img{transform:scale(1.07);}
+
+/* ---------- MEDIA FRAME: AJUSTADA A LA PROPORCION REAL (sin barras de relleno) ---------- */
+.media-frame--fit{aspect-ratio:auto;}
+.media-frame--fit img{position:static;width:100%;height:auto;object-fit:initial;
+  transform:scale(1.035);}
+.media-frame--fit.media-frame--zoom:hover img{transform:scale(1.035) scale(1.035);}
+
+/* ---------- LIGHTBOX ---------- */
+.lightbox-overlay{
+  position:fixed;inset:0;z-index:999;
+  background:rgba(20,10,6,.92);
+  display:flex;align-items:center;justify-content:center;
+  opacity:0;visibility:hidden;transition:opacity .3s ease;
+}
+.lightbox-overlay.open{opacity:1;visibility:visible;}
+.lightbox-overlay img{max-width:90vw;max-height:88vh;border-radius:10px;box-shadow:0 30px 80px rgba(0,0,0,.5);}
+.lightbox-close{
+  position:absolute;top:24px;right:32px;
+  background:none;border:none;color:#fff;font-size:2.4rem;line-height:1;cursor:pointer;
+}
+
 /* ---------- MATERIALES EN ARCO (home) ---------- */
 .materiales-arco{
   display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:1rem;
@@ -383,8 +411,9 @@ footer .meta{font-size:.85rem;opacity:.8;line-height:1.7;margin-top:1rem;}
 }
 .inspo-words .palabra:nth-child(even){color:var(--arcilla);}
 .inspo-words .palabra:nth-child(3n){color:var(--terracota);}
-.inspo-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:8px;}
-@media (max-width:680px){.inspo-grid{grid-template-columns:1fr;}}
+.inspo-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:24px;margin-top:8px;}
+.inspo-grid > div{flex:0 1 calc(50% - 12px);}
+@media (max-width:680px){.inspo-grid > div{flex-basis:100%;}}
 .inspo-grid .media-frame{aspect-ratio:16/9;}
 
 /* ---------- BACK LINK ---------- */

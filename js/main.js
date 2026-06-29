@@ -23,6 +23,31 @@ document.addEventListener('DOMContentLoaded', function(){
     });
   }
 
+  var lightbox = document.getElementById('lightbox-overlay');
+  if (lightbox){
+    var lightboxImg = document.getElementById('lightbox-img');
+    var lightboxClose = document.getElementById('lightbox-close');
+    var closeLightbox = function(){
+      lightbox.classList.remove('open');
+      lightboxImg.src = '';
+    };
+    document.querySelectorAll('.media-frame--zoom img').forEach(function(img){
+      img.addEventListener('click', function(){
+        if (img.style.display === 'none') return; /* imagen rota, no abrir */
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightbox.classList.add('open');
+      });
+    });
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', function(e){
+      if (e.target === lightbox) closeLightbox();
+    });
+    document.addEventListener('keydown', function(e){
+      if (e.key === 'Escape') closeLightbox();
+    });
+  }
+
   if ('IntersectionObserver' in window){
     var observer = new IntersectionObserver(function(entries){
       entries.forEach(function(entry){
